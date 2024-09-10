@@ -6,18 +6,9 @@ import { ProductView } from "./ProductView";
 export const AppRoutes = () => {
   return (
     <Routes>
-      <Route
-        path="/"
-        element={<Navigate replace to="/react-project-with-mobx/products" />}
-      />
-      <Route
-        path="/react-project-with-mobx/products"
-        element={<AllProducts />}
-      />
-      <Route
-        path="/react-project-with-mobx/products/:productId"
-        element={<ProductView />}
-      />
+      <Route path="/" element={<Navigate replace to="/products" />} />
+      <Route path="/products" element={<AllProducts />} />
+      <Route path="/products/:productId" element={<ProductView />} />
       <Route path="/login" element={<Login />} />
     </Routes>
   );

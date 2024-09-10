@@ -15,7 +15,7 @@ export const Login = observer(() => {
 
   const onLogin = async () => {
     await loginStore.fetchUserToken(userName, password);
-    navigate("/react-project-with-mobx/products");
+    navigate("/products");
   };
 
   const onChangeUserName = (event: ChangeEvent<HTMLInputElement>): void =>
