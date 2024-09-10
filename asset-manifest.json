@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/react-project-with-mobx/static/css/main.ecd5fee9.css",
+    "main.js": "/react-project-with-mobx/static/js/main.9273428f.js",
+    "static/js/453.7066b829.chunk.js": "/react-project-with-mobx/static/js/453.7066b829.chunk.js",
+    "index.html": "/react-project-with-mobx/index.html",
+    "main.ecd5fee9.css.map": "/react-project-with-mobx/static/css/main.ecd5fee9.css.map",
+    "main.9273428f.js.map": "/react-project-with-mobx/static/js/main.9273428f.js.map",
+    "453.7066b829.chunk.js.map": "/react-project-with-mobx/static/js/453.7066b829.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ecd5fee9.css",
+    "static/js/main.9273428f.js"
+  ]
+}
