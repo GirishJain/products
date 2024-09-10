@@ -21,7 +21,7 @@ export const Product = observer((props: IProps) => {
           <div className="d-flex justify-content-between align-items-center">
             <div className="btn-group">
               <Link
-                to={`/products/${props.product.id}`}
+                to={`/react-project-with-mobx/products/${props.product.id}`}
                 className="btn btn-sm btn-outline-secondary"
               >
                 View
