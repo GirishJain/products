@@ -1,12 +1,17 @@
 import { Link } from "react-router-dom";
 import { IProducts } from "../store/productsStore";
 import { observer } from "mobx-react-lite";
+import { useStore } from "../Hooks/useStore";
 
 interface IProps {
   product: IProducts;
 }
 
 export const Product = observer((props: IProps) => {
+  const {
+    rootStore: { loginStore },
+  } = useStore();
+
   return (
     <div className="col">
       <div className="card shadow-sm">
@@ -20,12 +25,14 @@ export const Product = observer((props: IProps) => {
           <p className="card-text">{props.product.title}</p>
           <div className="d-flex justify-content-between align-items-center">
             <div className="btn-group">
-              <Link
-                to={`/products/${props.product.id}`}
-                className="btn btn-sm btn-outline-secondary"
-              >
-                View
-              </Link>
+              {loginStore.getUserDetails?.username && (
+                <Link
+                  to={`/products/${props.product.id}`}
+                  className="btn btn-sm btn-outline-secondary"
+                >
+                  View
+                </Link>
+              )}
             </div>
             <b>₹{props.product.price}</b>
           </div>

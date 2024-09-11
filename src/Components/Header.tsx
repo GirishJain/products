@@ -4,7 +4,7 @@ import { useStore } from "../Hooks/useStore";
 
 export const Header = observer(() => {
   const {
-    rootStore: { loginStore },
+    rootStore: { loginStore, cartStore },
   } = useStore();
 
   const navigate = useNavigate();
@@ -32,7 +32,7 @@ export const Header = observer(() => {
               <Link to="/login" className="btn btn-outline-primary me-2">
                 Login
               </Link>
-              <button type="button" className="btn btn-primary">
+              <button type="button" className="btn btn-primary me-2">
                 Sign-up
               </button>
             </>
@@ -42,6 +42,9 @@ export const Header = observer(() => {
               <span className="me-2">
                 Welcome {loginStore.getUserDetails?.username}
               </span>
+              <Link to="/checkout" className="btn btn-primary me-2">
+                Cart ({cartStore.getCartCount || 0})
+              </Link>
               <button
                 onClick={onLogout}
                 type="button"
